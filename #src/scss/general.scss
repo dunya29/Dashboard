@@ -1,0 +1,344 @@
+html {
+  height: 100%;
+  background: #e1e5f2;
+}
+body {
+  height: 100%;
+  min-width: 720px;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+}
+.container{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex: 1 1 auto;
+  background: #E1E5F2;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  padding-bottom: 40px;
+}
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  &__inner{
+      flex: 1 1 auto;
+      overflow: hidden;
+      padding: 0 40px;
+      margin-top: 30px ;
+  }
+}
+h1 {
+  font-size: 40px;
+  font-weight: 500;
+  color: $main-color;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+}
+h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 26px;
+}
+h5 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 20px;
+}
+h1,h2,h3,h4,h5,h6,p {
+  line-height: 1.2;
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.media-cover {
+  position: relative;
+  overflow: hidden;
+  img, video, iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.media-contain {
+  position: relative;
+  overflow: hidden;
+  img, video, iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    object-fit: contain;
+    margin: auto;
+  }
+}
+.swiper {
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+}
+.swiper-wrapper {
+  height: 100%;
+  display: flex;
+}
+.swiper-slide {
+  display: block;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background: #ffffff;
+}
+.swiper-slide-active {
+  z-index: 2;
+}
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-pagination-bullet {
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid $main-color;
+  border-radius: 50%;
+  transition: all .3s linear;
+  margin: 0 8px;
+}
+.swiper-pagination-bullet-active {
+  background: $main-color;
+}
+.date {
+  color: $main-color;
+  text-align: right;
+  margin-left: 10px;
+  &__top {
+    font-size: 40px;
+    font-weight: 500;
+  }
+  &__bottom {
+    font-size: 32px;
+  }
+}
+.header {
+  min-height: 117px;
+  padding: 16px 0;
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.item-blocks {
+  position: relative;
+  margin-bottom: 36px;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -76px;
+    left: 0;
+    width: 100%;
+    height: 92px;
+    background: #E1E5F2;
+    filter: blur(20px);
+  }
+}
+.item-block {
+  display: block;
+  padding: 20px 44px 20px 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  position: relative;
+  color: #000;
+  p {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+  &.pinned {
+    animation: changeBgColor 10s linear infinite both;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 32px;
+      height: 32px;
+      top: 16px;
+      right: 16px;
+      background: url(../img/icons/pin.svg) center/contain, no-repeat;
+      transition: all .3s linear;
+    }
+    p {
+      color: #fff;
+    }
+  }
+  a {
+    color: inherit;
+  }
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 12px -8px -12px;
+    a {
+      font-size: 20px;
+      margin: 0 8px 12px;
+    }
+  }
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px -8px -12px;
+  }
+  &__status, &__date {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1.2;
+    padding: 4px 10px;
+    border-radius: 35px;
+    margin: 0 8px 12px;
+  }
+  &__status {
+    color: #fff;
+    &.submited {
+      background: #5465FF;
+    }
+    &.progress {
+      background: #EA7317;
+    }
+    &.fulfilled {
+      background: #25A18E;
+    }
+  }
+  &__date {
+    color: $main-color;
+    border: 1px solid rgba(39, 24, 126, 0.60);
+  }
+}
+@keyframes changeBgColor {
+  0% {
+    background: #1E87E8;
+
+    box-shadow: 0px 9px 37px 0px rgba(30, 135, 232, 0.65);
+  }
+  50% {
+    background: #27187E;
+    box-shadow: 0px 9px 37px 0px rgba(39, 24, 126, 0.65);  
+  }
+  100% {
+    background: #1E87E8;
+
+    box-shadow: 0px 9px 37px 0px rgba(30, 135, 232, 0.65);
+  }
+}
+.subscribe {
+  padding: 20px 35px 19px 20px;
+  border-radius: 16px;
+  background: rgba(39, 24, 126, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;z-index: 2;
+  margin-bottom: 30px;
+  p {
+    font-size: 20px;
+    max-width: 367px;
+    margin: 0 10px 0 0;
+  }
+  span {
+    font-size: 40px;
+    font-weight: 500;
+    color: $main-color;
+  }
+}
+.video-cols {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+  &__col {
+    border-radius: 16px;
+    overflow: hidden;
+    video {
+      width: 100%;
+    }
+  }
+}
+.mainswiper {
+  &__item{
+    min-height: 250px;
+    flex: 0 0 100%;
+    padding: 24px 24px 38px;
+    border-radius: 16px;
+    background: #FFF;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30% 1fr;
+    gap: 34px;
+  }
+  &__left {
+    span {
+      display: inline-block;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+  }
+  &__cols {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0 20px;
+  }
+  &__col {
+    margin-bottom: 36px;
+    span {
+      display: block;
+      font-size: 24px;
+      font-weight: 500;
+      &:first-child {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.60);
+      }
+    }
+  }
+  .swiper-pagination {
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    width: 100%;
+  }
+}

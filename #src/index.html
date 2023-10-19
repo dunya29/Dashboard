@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Главная"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        <header class="header">
+          <div class="container">
+            <h1>Нижне-Печёрская 12</h1>
+            <div class="date">
+              <div class="date__top">
+                <span class="date__hours"></span>
+                <span>:</span>
+                <span class="date__min"></span>
+              </div>
+              <div class="date__bottom">
+                 <span class="date__day"></span>
+                 <span class="date__month"></span>
+              </div>   
+            </div>
+          </div>
+        </header>
+        <!--main-->  
+        <main class="main">
+            <section class="page">
+                <div class="page__inner">
+                    <h5>Коротко о важном из чата дома:</h5>
+                    <div class="item-blocks">
+                        <div class="item-block pinned">
+                          <p>12.10.2023 ожидается уборка снега, просьба убрать машины!</p>
+                        </div>
+                        <div class="item-block">
+                          <p>12.10.2023 ожидается уборка снега, просьба убрать машины! 12.10.2023 ожидается уборка снега, просьба убрать машины!</p>
+                        </div>
+                        <div class="item-block">
+                          <p>12.10.2023 ожидается уборка снега, просьба убрать машины! 12.10.2023 ожидается уборка снега, просьба убрать машины!</p>
+                        </div>
+                        <div class="item-block">
+                          <p>12.10.2023 ожидается уборка снега, просьба убрать машины! 12.10.2023 ожидается уборка снега, просьба убрать машины!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="page__bottom">
+                  <div class="container">
+                    <div class="subscribe">
+                      <p>Подписаться на важные уведомления по дому можно на сайте:</p>
+                      <span>infodm.ru</span>
+                    </div>
+                    <div class="video-cols">
+                      <div class="video-cols__col">
+                        <input type="hidden" name="webrtc-url" class="webrtc-url" value="https://rtsp.infodm.ru/stream/27aec28e-6181-4753-9acd-0456a75f0289/channel/0/webrtc">
+                        <video class="webrtc-video" autoplay="" muted="" playsinline="" controls="" style="max-height: 100%;"></video>
+                      </div>
+                      <div class="video-cols__col">
+                        <input type="hidden" name="webrtc-url" class="webrtc-url" value="https://rtsp.infodm.ru/stream/27aec28e-6181-4753-9acd-0456a75f0289/channel/0/webrtc">
+                        <video class="webrtc-video" autoplay="" muted="" playsinline="" controls="" style="max-height: 100%;"></video>
+                      </div>
+                      <div class="video-cols__col">
+                        <input type="hidden" name="webrtc-url" class="webrtc-url" value="https://rtsp.infodm.ru/stream/27aec28e-6181-4753-9acd-0456a75f0289/channel/0/webrtc">
+                        <video class="webrtc-video" autoplay="" muted="" playsinline="" controls="" style="max-height: 100%;"></video>
+                      </div>
+                    </div>
+                    <div class="swiper mainswiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide mainswiper__item">
+                          <div class="mainswiper__left">
+                            <div class="mainswiper__preview"><img src="img/bell.jpg" width="149" height="122" alt=""></div>                          
+                          </div>
+                          <div class="mainswiper__right">
+                            <p><b>Жителям 17 этажа</b> просьба<br>спустить воду из системы<br>отопления.</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide mainswiper__item">
+                          <div class="mainswiper__left">
+                            <div class="mainswiper__preview"><img src="img/qr-code.png" width="155" height="155" alt=""></div>                          
+                          </div>
+                          <div class="mainswiper__right">
+                            <p>Заходите в чат нашего<br>дома <b>в телеграмме</b></p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide mainswiper__item">
+                          <div class="mainswiper__left">
+                            <span>Соблюдайте<br>тишину!</span>
+                            <div class="mainswiper__preview"><img src="img/muted.png" width="155" height="93" alt=""></div>                          
+                          </div>
+                          <div class="mainswiper__right">
+                            <div class="mainswiper__cols">
+                              <div class="mainswiper__col">
+                                <span>В рабочие дни</span>
+                                <span>С 22 до 7</span>  
+                              </div>
+                              <div class="mainswiper__col">
+                                <span>В выходные дни</span>
+                                <span>С 23 до 10</span>  
+                              </div>
+                              <div class="mainswiper__col">
+                                <span>В любой день</span>
+                                <span>С 12:30 до 15</span>  
+                              </div>
+                              <div class="mainswiper__col">
+                                <span>Ремонтные работы</span>
+                                <span>СТРОГО до 20:00</span>  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        <footer></footer>
+    </div>
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/swiper.min.js"></script>
+    <script src="js/libs/rtsptoweb.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
