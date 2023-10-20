@@ -19,10 +19,10 @@ let mainswiper = new Swiper(".mainswiper", {
   observer: true,
   observeParents: true,
   loop: true,
-/*   autoplay: {
+  autoplay: {
     delay: 5000,
     disableOnInteraction: false	
-  }, */
+  },
   pagination: {
     el: '.mainswiper .swiper-pagination',
     type: 'bullets'
