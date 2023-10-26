@@ -14,15 +14,15 @@ setDate()
 setInterval(setDate, 60000);
 
 let mainswiper = new Swiper(".mainswiper", {
-  slidesPerView: 1,
+  slidesPerView: 3,
   spaceBetween: 20,
   observer: true,
   observeParents: true,
   loop: true,
-  autoplay: {
+/*   autoplay: {
     delay: 5000,
     disableOnInteraction: false	
-  },
+  }, */
   pagination: {
     el: '.mainswiper .swiper-pagination',
     type: 'bullets'

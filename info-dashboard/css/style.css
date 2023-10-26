@@ -269,6 +269,7 @@ input[type=number] {
 html {
   height: 100%;
   background: #e1e5f2;
+  font-size: 10px;
 }
 
 body {
@@ -276,7 +277,7 @@ body {
   min-width: 720px;
   background: #fff;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.3;
   color: #000000;
@@ -290,7 +291,7 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 4rem;
 }
 
 .wrap {
@@ -310,8 +311,8 @@ body {
   flex: 1 1 auto;
   background: #E1E5F2;
   overflow: hidden;
-  border-radius: 16px 16px 0 0;
-  padding-bottom: 40px;
+  border-radius: 1.6rem 1.6rem 0 0;
+  padding-bottom: 4rem;
 }
 
 .page {
@@ -330,36 +331,36 @@ body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   overflow: hidden;
-  padding: 0 40px;
-  margin-top: 30px;
+  padding: 0 4rem;
+  margin-top: 3rem;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 500;
   color: #27187E;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 500;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 500;
 }
 
 h4 {
-  font-size: 26px;
+  font-size: 2.6rem;
 }
 
 h5 {
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 h6 {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 h1,
@@ -370,7 +371,7 @@ h5,
 h6,
 p {
   line-height: 1.2;
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
 }
 
 h1:last-child,
@@ -460,15 +461,15 @@ p:last-child {
 
 .swiper-pagination-bullet {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 14px;
-  flex: 0 0 14px;
-  width: 14px;
-  height: 14px;
-  border: 1px solid #27187E;
+  -ms-flex: 0 0 1.4rem;
+  flex: 0 0 1.4rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 0.1rem solid #27187E;
   border-radius: 50%;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  margin: 0 8px;
+  margin: 0 0.8rem;
 }
 
 .swiper-pagination-bullet-active {
@@ -478,21 +479,21 @@ p:last-child {
 .date {
   color: #27187E;
   text-align: right;
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 
 .date__top {
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 500;
 }
 
 .date__bottom {
-  font-size: 32px;
+  font-size: 3.2rem;
 }
 
 .header {
-  min-height: 117px;
-  padding: 16px 0;
+  min-height: 11.7rem;
+  padding: 1.6rem 0;
 }
 
 .header h1 {
@@ -514,7 +515,7 @@ p:last-child {
 
 .item-blocks {
   position: relative;
-  margin-bottom: 36px;
+  margin-bottom: 3.6rem;
 }
 
 .item-blocks:after {
@@ -532,16 +533,16 @@ p:last-child {
 
 .item-block {
   display: block;
-  padding: 20px 44px 20px 20px;
+  padding: 2rem 4.4rem 2rem 2rem;
   background: #ffffff;
-  border-radius: 16px;
-  margin-bottom: 12px;
+  border-radius: 1.6rem;
+  margin-bottom: 1.2rem;
   position: relative;
   color: #000;
 }
 
 .item-block p {
-  font-size: 26px;
+  font-size: 2.6rem;
   line-height: 1.3;
 }
 
@@ -550,15 +551,19 @@ p:last-child {
   animation: changeBgColor 10s linear infinite both;
 }
 
+.item-block.pinned a {
+  color: #fff;
+}
+
 .item-block.pinned:after {
   content: "";
   display: block;
   position: absolute;
   right: 0;
-  width: 32px;
-  height: 32px;
-  top: 16px;
-  right: 16px;
+  width: 3.2rem;
+  height: 3.2rem;
+  top: 1.6rem;
+  right: 1.6rem;
   background: url(../img/icons/pin.svg) center/contain, no-repeat;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -581,12 +586,12 @@ p:last-child {
   justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 12px -8px -12px;
+  margin: 1.2rem -0.8rem -1.2rem;
 }
 
 .item-block__contacts a {
-  font-size: 20px;
-  margin: 0 8px 12px;
+  font-size: 2rem;
+  margin: 0 0.8rem 1.2rem;
 }
 
 .item-block__footer {
@@ -601,17 +606,17 @@ p:last-child {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 16px -8px -12px;
+  margin: 1.6rem -0.8rem -1.2rem;
 }
 
 .item-block__status,
 .item-block__date {
   display: inline-block;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 1.2;
-  padding: 4px 10px;
-  border-radius: 35px;
-  margin: 0 8px 12px;
+  padding: 0.4rem 1rem;
+  border-radius: 3.5rem;
+  margin: 0 0.8rem 1.2rem;
 }
 
 .item-block__status {
@@ -632,52 +637,53 @@ p:last-child {
 
 .item-block__date {
   color: #27187E;
-  border: 1px solid rgba(39, 24, 126, 0.6);
+  background: #fff;
+  border: 0.1rem solid rgba(39, 24, 126, 0.6);
 }
 
 @-webkit-keyframes changeBgColor {
   0% {
     background: #1E87E8;
-    -webkit-box-shadow: 0px 9px 37px 0px rgba(30, 135, 232, 0.65);
-    box-shadow: 0px 9px 37px 0px rgba(30, 135, 232, 0.65);
+    -webkit-box-shadow: 0px 0.9rem 3.7rem 0px rgba(30, 135, 232, 0.65);
+    box-shadow: 0px 0.9rem 3.7rem 0px rgba(30, 135, 232, 0.65);
   }
 
   50% {
     background: #27187E;
-    -webkit-box-shadow: 0px 9px 37px 0px rgba(39, 24, 126, 0.65);
-    box-shadow: 0px 9px 37px 0px rgba(39, 24, 126, 0.65);
+    -webkit-box-shadow: 0px 0.9rem 3.7rem 0px rgba(39, 24, 126, 0.65);
+    box-shadow: 0px 0.9rem 3.7rem 0px rgba(39, 24, 126, 0.65);
   }
 
   100% {
     background: #1E87E8;
-    -webkit-box-shadow: 0px 9px 37px 0px rgba(30, 135, 232, 0.65);
-    box-shadow: 0px 9px 37px 0px rgba(30, 135, 232, 0.65);
+    -webkit-box-shadow: 0px 0.9rem 3.7rem 0px rgba(30, 135, 232, 0.65);
+    box-shadow: 0px 0.9rem 3.7rem 0px rgba(30, 135, 232, 0.65);
   }
 }
 
 @keyframes changeBgColor {
   0% {
     background: #1E87E8;
-    -webkit-box-shadow: 0px 9px 37px 0px rgba(30, 135, 232, 0.65);
-    box-shadow: 0px 9px 37px 0px rgba(30, 135, 232, 0.65);
+    -webkit-box-shadow: 0px 0.9rem 3.7rem 0px rgba(30, 135, 232, 0.65);
+    box-shadow: 0px 0.9rem 3.7rem 0px rgba(30, 135, 232, 0.65);
   }
 
   50% {
     background: #27187E;
-    -webkit-box-shadow: 0px 9px 37px 0px rgba(39, 24, 126, 0.65);
-    box-shadow: 0px 9px 37px 0px rgba(39, 24, 126, 0.65);
+    -webkit-box-shadow: 0px 0.9rem 3.7rem 0px rgba(39, 24, 126, 0.65);
+    box-shadow: 0px 0.9rem 3.7rem 0px rgba(39, 24, 126, 0.65);
   }
 
   100% {
     background: #1E87E8;
-    -webkit-box-shadow: 0px 9px 37px 0px rgba(30, 135, 232, 0.65);
-    box-shadow: 0px 9px 37px 0px rgba(30, 135, 232, 0.65);
+    -webkit-box-shadow: 0px 0.9rem 3.7rem 0px rgba(30, 135, 232, 0.65);
+    box-shadow: 0px 0.9rem 3.7rem 0px rgba(30, 135, 232, 0.65);
   }
 }
 
 .subscribe {
-  padding: 20px 35px 19px 20px;
-  border-radius: 16px;
+  padding: 2rem 3.5rem 1.9rem 2rem;
+  border-radius: 1.6rem;
   background: rgba(39, 24, 126, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -690,17 +696,17 @@ p:last-child {
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
 .subscribe p {
-  font-size: 20px;
-  max-width: 367px;
-  margin: 0 10px 0 0;
+  font-size: 2rem;
+  max-width: 36.7rem;
+  margin: 0 1rem 0 0;
 }
 
 .subscribe span {
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 500;
   color: #27187E;
 }
@@ -708,12 +714,12 @@ p:last-child {
 .video-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-bottom: 30px;
+  gap: 1.6rem;
+  margin-bottom: 3rem;
 }
 
 .video-cols__col {
-  border-radius: 16px;
+  border-radius: 1.6rem;
   overflow: hidden;
 }
 
@@ -722,54 +728,76 @@ p:last-child {
 }
 
 .mainswiper__item {
-  min-height: 250px;
+  min-height: 25rem;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
-  padding: 24px 24px 38px;
-  border-radius: 16px;
+  padding: 2.4rem 2.4rem 3.8rem;
+  border-radius: 1.6rem;
   background: #FFF;
   display: grid;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   grid-template-columns: 30% 1fr;
-  gap: 34px;
+  gap: 3.4rem;
 }
 
 .mainswiper__left span {
   display: inline-block;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
+
+.mainswiper__left img {
+  width: 16rem;
 }
 
 .mainswiper__cols {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 0 20px;
+  gap: 0 2rem;
 }
 
 .mainswiper__col {
-  margin-bottom: 36px;
+  margin-bottom: 3.6rem;
 }
 
 .mainswiper__col span {
   display: block;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 500;
 }
 
 .mainswiper__col span:first-child {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.6);
 }
 
 .mainswiper .swiper-pagination {
   position: absolute;
-  bottom: 24px;
+  bottom: 2.4rem;
   left: 0;
   width: 100%;
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 2048px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 2880px) {
+  html {
+    font-size: 25px;
+  }
 }
