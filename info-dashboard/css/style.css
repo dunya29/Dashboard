@@ -491,6 +491,40 @@ p:last-child {
   font-size: 3.2rem;
 }
 
+.date__dot {
+  vertical-align: text-bottom;
+  -webkit-animation: blink 1s infinite both;
+  animation: blink 1s infinite both;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
 .header {
   min-height: 11.7rem;
   padding: 1.6rem 0;
@@ -531,6 +565,14 @@ p:last-child {
   filter: blur(20px);
 }
 
+.time {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #707579;
+  text-align: right;
+}
+
 .item-block {
   display: block;
   padding: 2rem 4.4rem 2rem 2rem;
@@ -569,8 +611,12 @@ p:last-child {
   transition: all 0.3s linear;
 }
 
-.item-block.pinned p {
+.item-block.pinned > * {
   color: #fff;
+}
+
+.item-block.pinned .time {
+  opacity: 0.8;
 }
 
 .item-block a {

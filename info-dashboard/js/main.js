@@ -1,14 +1,17 @@
 const hrs = document.querySelector(".date__hours")
 const min = document.querySelector(".date__min")
-const day = document.querySelector(".date__day")
+const date = document.querySelector(".date__date")
 const month = document.querySelector(".date__month")
-let allMonths = ["янв","февр","мар","апр","май","июнь","июль","авг","сент","окт","нояб","дек"]
+const day = document.querySelector(".date__day")
+let allMonths = ["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"]
+let allDays = ["воскресенье","понедельник","вторник", "среда","четверг","пятница","суббота"]
 function setDate() {
-  let date = new Date()
-  hrs.textContent = date.getHours()
-  min.textContent = date.getMinutes() > 9 ? date.getMinutes() : "0" +  date.getMinutes()
-  day.textContent = date.getDate()
-  month.textContent = allMonths[date.getMonth()]
+  let now = new Date()
+  hrs.textContent = now.getHours()
+  min.textContent = now.getMinutes() > 9 ? now.getMinutes() : "0" +  now.getMinutes()
+  date.textContent = now.getDate()
+  month.textContent = allMonths[now.getMonth()]
+  day.textContent = allDays[now.getDay()]
 }
 setDate()
 setInterval(setDate, 60000);
@@ -19,10 +22,10 @@ let mainswiper = new Swiper(".mainswiper", {
   observer: true,
   observeParents: true,
   loop: true,
-/*   autoplay: {
+   autoplay: {
     delay: 5000,
     disableOnInteraction: false	
-  }, */
+  }, 
   pagination: {
     el: '.mainswiper .swiper-pagination',
     type: 'bullets'

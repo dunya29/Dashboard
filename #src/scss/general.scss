@@ -156,6 +156,21 @@ h1,h2,h3,h4,h5,h6,p {
   &__bottom {
     font-size: 3.2rem;
   }
+  &__dot {
+    vertical-align: text-bottom;
+    animation: blink 1s infinite both;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0.1;
+  }
 }
 .header {
   min-height: 11.7rem;
@@ -170,6 +185,7 @@ h1,h2,h3,h4,h5,h6,p {
     justify-content: space-between;
   }
 }
+
 .item-blocks {
   position: relative;
   margin-bottom: 3.6rem;
@@ -184,6 +200,13 @@ h1,h2,h3,h4,h5,h6,p {
     background: #E1E5F2;
     filter: blur(20px);
   }
+}
+.time {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #707579;
+  text-align: right;
 }
 .item-block {
   display: block;
@@ -214,8 +237,11 @@ h1,h2,h3,h4,h5,h6,p {
       background: url(../img/icons/pin.svg) center/contain, no-repeat;
       transition: all .3s linear;
     }
-    p {
+    > * {
       color: #fff;
+    }
+    .time {
+      opacity: 0.8;
     }
   }
   a {
