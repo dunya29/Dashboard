@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         sdpSemantics: 'unified-plan'
       })
       webrtc.ontrack = function (event) {
-        console.log(event.streams.length + ' track is delivered')
         videoEl.srcObject = event.streams[0]
         videoEl.play()
       }
