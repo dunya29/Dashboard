@@ -34,6 +34,20 @@
         <main class="main">
             <section class="page">
                 <div class="page__inner">
+                  <div class="video-cols" data-link="https://rtsp.infodm.ru/stream.html?src=entry&src=main-door&mode=webrtc">
+                    <!-- <div class="video-cols__col">
+                      <input type="hidden" name="webrtc-url" class="webrtc-url" value="https://rtsp.infodm.ru/stream/27aec28e-6181-4753-9acd-0456a75f0289/channel/0/webrtc">
+                      <video class="webrtc-video" autoplay="" muted="" playsinline="" controls="" style="max-height: 100%;"></video>
+                    </div>
+                    <div class="video-cols__col">
+                      <input type="hidden" name="mse-url" class="mse-url" value="wss://rtsp.infodm.ru/stream/3c16f57a-416b-4a57-89d6-f57c7dc44975/channel/0/mse?uuid=3c16f57a-416b-4a57-89d6-f57c7dc44975&channel=0">
+                      <video class="mse-video" autoplay="" muted="" playsinline="" controls="" style="max-height: 100%;"></video>
+                    </div>
+                    <div class="video-cols__col">
+                      <input type="hidden" name="mse-url" class="mse-url" value="wss://rtsp.infodm.ru/stream/3c16f57a-416b-4a57-89d6-f57c7dc44975/channel/0/mse?uuid=3c16f57a-416b-4a57-89d6-f57c7dc44975&channel=0">
+                      <video class="mse-video" autoplay="" muted="" playsinline="" controls="" style="max-height: 100%;"></video>
+                    </div> -->
+                  </div>
                     <h5>Коротко о важном из чата дома:</h5>
                     <div class="item-blocks">
                         <div class="item-block pinned">
@@ -59,20 +73,6 @@
                     <div class="subscribe">
                       <p>Подписаться на важные уведомления по дому можно на сайте:</p>
                       <span>infodm.ru</span>
-                    </div>
-                    <div class="video-cols">
-                      <!-- <div class="video-cols__col">
-                        <input type="hidden" name="webrtc-url" class="webrtc-url" value="https://rtsp.infodm.ru/stream/27aec28e-6181-4753-9acd-0456a75f0289/channel/0/webrtc">
-                        <video class="webrtc-video" autoplay="" muted="" playsinline="" controls="" style="max-height: 100%;"></video>
-                      </div>
-                      <div class="video-cols__col">
-                        <input type="hidden" name="mse-url" class="mse-url" value="wss://rtsp.infodm.ru/stream/3c16f57a-416b-4a57-89d6-f57c7dc44975/channel/0/mse?uuid=3c16f57a-416b-4a57-89d6-f57c7dc44975&channel=0">
-                        <video class="mse-video" autoplay="" muted="" playsinline="" controls="" style="max-height: 100%;"></video>
-                      </div>
-                      <div class="video-cols__col">
-                        <input type="hidden" name="mse-url" class="mse-url" value="wss://rtsp.infodm.ru/stream/3c16f57a-416b-4a57-89d6-f57c7dc44975/channel/0/mse?uuid=3c16f57a-416b-4a57-89d6-f57c7dc44975&channel=0">
-                        <video class="mse-video" autoplay="" muted="" playsinline="" controls="" style="max-height: 100%;"></video>
-                      </div> -->
                     </div>
                     <div class="swiper mainswiper">
                       <div class="swiper-wrapper">
@@ -132,40 +132,7 @@
     <script src="js/libs/swiper.min.js"></script>
     <script src="js/libs/video-rtc.js"></script>
     <script src="js/main.js"></script>
-    <script type="module">
-      let url = "https://rtsp.infodm.ru/stream.html?src=entry&src=main-door&mode=webrtc"
-      let searchIdx = url.indexOf("?")
-      console.log(url.slice(0,searchIdx))
-      const params = new URLSearchParams(url.slice(searchIdx));
-      // support multiple streams and multiple modes
-      const streams = params.getAll('src');
-      const modes = params.getAll('mode');
-      console.log(location.search)
-      if (modes.length === 0) modes.push('');
-  
-      while (modes.length > streams.length) {
-          streams.push(streams[0]);
-      }
-      while (streams.length > modes.length) {
-          modes.push(modes[0]);
-      }
-  
-      if (streams.length > 1) {
-          document.body.className = 'flex';
-      }
-  
-      const background = params.get('background') !== 'false';
-      const width = '1 0 ' + (params.get('width') || '320px');
-  
-      for (let i = 0; i < streams.length; i++) {
-          const video = document.createElement('video-stream');
-          video.background = background;
-          video.mode = modes[i] || video.mode;
-          video.style.flex = width;
-          video.src = new URL('api/ws?src=' + encodeURIComponent(streams[i]), url.slice(0,searchIdx));
-          document.querySelector(".video-cols").appendChild(video);
-      }
-  </script>
 </body>
 
 </html>
+

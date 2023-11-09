@@ -269,12 +269,12 @@ input[type=number] {
 html {
   height: 100%;
   background: #e1e5f2;
-  font-size: 10px;
+  font-size: 5px;
 }
 
 body {
   height: 100%;
-  min-width: 720px;
+  min-width: 320px;
   background: #fff;
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
@@ -330,23 +330,39 @@ body {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  overflow: hidden;
   padding: 0 4rem;
   margin-top: 3rem;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.page__inner::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.page__bottom {
   position: relative;
 }
 
-.page__inner:after {
+.page__bottom:after {
   content: "";
   display: block;
   position: absolute;
-  bottom: -76px;
+  top: -5.5rem;
   left: 0;
   width: 100%;
-  height: 92px;
+  height: 9.2rem;
   background: #E1E5F2;
   -webkit-filter: blur(20px);
   filter: blur(20px);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.page__inner.scrollend + .page__bottom:after {
+  opacity: 0;
 }
 
 h1 {
@@ -540,7 +556,6 @@ p:last-child {
 }
 
 .header {
-  min-height: 11.7rem;
   padding: 1.6rem 0;
 }
 
@@ -562,21 +577,7 @@ p:last-child {
 }
 
 .item-blocks {
-  position: relative;
   margin-bottom: 3.6rem;
-}
-
-.item-blocks:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -76px;
-  left: 0;
-  width: 100%;
-  height: 92px;
-  background: #E1E5F2;
-  -webkit-filter: blur(20px);
-  filter: blur(20px);
 }
 
 .time {
@@ -778,7 +779,7 @@ p:last-child {
   margin-bottom: 3rem;
 }
 
-.video-cols__col {
+.video-cols video {
   border-radius: 1.6rem;
   overflow: hidden;
 }
@@ -842,22 +843,45 @@ p:last-child {
   bottom: 2.4rem;
   left: 0;
   width: 100%;
+  z-index: 2;
 }
 
-@media (min-width: 1920px) {
+.mode {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media (min-width: 991.98px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1079.98px) and (min-height: 1900px) {
   html {
     font-size: 15px;
   }
 }
 
-@media (min-width: 2048px) {
+@media (min-width: 1439.98px) and (min-height: 2500px) {
   html {
     font-size: 20px;
   }
 }
 
-@media (min-width: 2880px) {
+@media (min-width: 2000.98px) and (min-height: 3000px) {
   html {
-    font-size: 25px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-cols {
+    grid-template-columns: 1fr 1fr;
   }
 }
