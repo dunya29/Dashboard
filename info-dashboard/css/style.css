@@ -355,8 +355,8 @@ body {
   width: 100%;
   height: 9.2rem;
   background: #E1E5F2;
-  -webkit-filter: blur(20px);
-  filter: blur(20px);
+  -webkit-filter: blur(2rem);
+  filter: blur(2rem);
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
@@ -779,13 +779,56 @@ p:last-child {
   margin-bottom: 3rem;
 }
 
-.video-cols video {
+.video-cols__col {
+  position: relative;
   border-radius: 1.6rem;
   overflow: hidden;
 }
 
+.video-cols__col:before,
+.video-cols__col:after {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+
+.video-cols__col:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 2;
+}
+
+.video-cols__col:after {
+  content: "Loading.";
+  font-size: 3rem;
+  color: transparent;
+  background: -webkit-gradient(linear, left top, right top, from(#1E87E8), to(#27187E));
+  background: linear-gradient(to right, #1E87E8, #27187E);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
 .video-cols__col video {
   width: 100%;
+}
+
+.video-cols__col.onconnect:before,
+.video-cols__col.onconnect:after {
+  opacity: 1;
+  -webkit-transition: all 0s linear;
+  transition: all 0s linear;
 }
 
 .mainswiper__item {

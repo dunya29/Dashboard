@@ -714,7 +714,10 @@ class VideoStream extends VideoRTC {
     onconnect() {
         console.debug('stream.onconnect');
         const result = super.onconnect();
-        if (result) this.divMode = 'loading';
+        if (result) {
+            this.parentNode.classList.add("onconnect")
+            this.divMode = 'loading';
+        }
         return result;
     }
 
@@ -726,7 +729,6 @@ class VideoStream extends VideoRTC {
     onopen() {
         console.debug('stream.onopen');
         const result = super.onopen();
-
         this.onmessage['stream'] = msg => {
             console.debug('stream.onmessge', msg);
             switch (msg.type) {
@@ -746,6 +748,7 @@ class VideoStream extends VideoRTC {
     }
 
     onclose() {
+        this.parentNode.classList.remove("onconnect")
         console.debug('stream.onclose');
         return super.onclose();
     }
@@ -753,7 +756,6 @@ class VideoStream extends VideoRTC {
     onpcvideo(ev) {
         console.debug('stream.onpcvideo');
         super.onpcvideo(ev);
-
         if (this.pcState !== WebSocket.CLOSED) {
             this.divMode = 'RTC';
         }

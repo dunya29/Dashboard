@@ -54,12 +54,14 @@ if (videoCols) {
     const background = params.get('background') !== 'false';
     const width = '1 0 ' + (params.get('width') || '320px');
     for (let i = 0; i < streams.length; i++) {
+        const videoCol = document.createElement("div")
+        videoCol.classList.add("video-cols__col")
         const video = document.createElement('video-stream');
         video.background = background;
         video.mode = modes[i] || video.mode;
         video.style.flex = width;
         video.src = new URL('api/ws?src=' + encodeURIComponent(streams[i]), url.slice(0,searchIdx));
-        item.appendChild(video);
+        item.appendChild(videoCol).appendChild(video);
     }
   })
 }
