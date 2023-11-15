@@ -3,8 +3,9 @@ const min = document.querySelector(".date__min")
 const date = document.querySelector(".date__date")
 const month = document.querySelector(".date__month")
 const day = document.querySelector(".date__day")
-let allMonths = ["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"]
-let allDays = ["воскресенье","понедельник","вторник", "среда","четверг","пятница","суббота"]
+const year = document.querySelector(".date__year")
+let allMonths = ["01","02","03","04","05","06","07","08","09","10","11","12"]
+let allDays = ["вс","пн","вт", "ср","чт","пт","сб"]
 function setDate() {
   let now = new Date()
   hrs.textContent = now.getHours()
@@ -12,6 +13,7 @@ function setDate() {
   date.textContent = now.getDate()
   month.textContent = allMonths[now.getMonth()]
   day.textContent = allDays[now.getDay()]
+  year.textContent = String(now.getFullYear()).substring(2)
 }
 setDate()
 setInterval(setDate, 60000);
