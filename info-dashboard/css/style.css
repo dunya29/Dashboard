@@ -831,6 +831,13 @@ p:last-child {
   transition: all 0s linear;
 }
 
+.poster {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 1.6rem;
+}
+
 .mainswiper__item {
   min-height: 25rem;
   -webkit-box-flex: 0;

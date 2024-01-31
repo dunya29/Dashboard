@@ -422,7 +422,7 @@ class VideoRTC extends HTMLElement {
         }
 
         this.play();
-
+        this.parentNode.classList.remove("onconnect")
         this.mseCodecs = '';
 
         this.onmessage['mse'] = msg => {

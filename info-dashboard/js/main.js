@@ -70,7 +70,6 @@ if (videoCols) {
 const pageInner = document.querySelector(".page__inner")
 if (pageInner) {
   pageInner.addEventListener("scrollend", function(e) {
-    console.log(pageInner.scrollHeight - pageInner.clientHeight - pageInner.scrollTop)
     if ((pageInner.scrollHeight - pageInner.clientHeight - pageInner.scrollTop) < 30) {
       pageInner.classList.add("scrollend")
     } else {

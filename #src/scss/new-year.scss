@@ -1,0 +1,16 @@
+#snowflake{
+    width: 3rem;
+}
+.snow {
+  position: fixed;
+  top: -5vh;
+  transform: translateY(0);
+   transform : rotate(180deg);
+  animation: fall 7s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
